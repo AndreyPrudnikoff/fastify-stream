@@ -65,10 +65,8 @@ function videosRoutes(fastify, option, done) {
     fastify.post('/api/video', async (request, reply) => {
         const file = request.raw.files.file
         const writeFileFs = await uploadFile(file)
-
-        if (file.mimetype === 'video/webm' && writeFileFs) {
-
-            const writeFileDb = await uploadFileDb(file, request.headers['x-user'])
+        if (file.mimetype === 'video/mp4' && writeFileFs) {
+            const writeFileDb = await uploadFileDb(file, request.headers['x-user'], request.headers['x-duration'])
             reply.code(201).send({success: writeFileDb})
         } else {
             return new Error("Not saved")

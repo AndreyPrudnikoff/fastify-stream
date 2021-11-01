@@ -10,7 +10,7 @@ fastify.register(require('fastify-file-upload'))
 fastify.register(require('fastify-websocket'))
 fastify.register(require('fastify-jwt'), {secret: 'token'})
 fastify.register(require('fastify-static'), {root: path.join(__dirname, '/static'), prefix: '/static/'})
-fastify.register(require('fastify-cors'), {origin: ['http://localhost:3000']})
+fastify.register(require('fastify-cors'), {origin: ['http://localhost:3000', 'http://192.168.1.8:3000']})
 
 fastify.register(require('./routes/auth'))
 fastify.register(require('./routes/users'))

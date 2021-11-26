@@ -2,6 +2,7 @@ const fastify = require('fastify')({logger: true})
 const path = require('path')
 const client = require("./db")
 const fs = require("fs")
+const process = require('process')
 
 const routes = require('./routes')
 

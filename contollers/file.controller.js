@@ -8,7 +8,7 @@ async function uploadFile(file) {
     try {
         return fs.writeFile(path.resolve(__dirname, '../static', file.name), file.data,)
             .then(() => true)
-            .catch(err => false)
+            .catch(() => false)
 
     } catch {
         return false

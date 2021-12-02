@@ -1,7 +1,7 @@
 const client = require('../db')
 
 const get = 'SELECT * FROM users'
-const getOne = 'SELECT * FROM users where id = '
+const getOne = 'SELECT * FROM users WHERE id = '
 const updateOne = 'UPDATE users SET ### WHERE id ='
 
 async function getUsers() {

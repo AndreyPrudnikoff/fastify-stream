@@ -5,7 +5,7 @@ const client = require('../db')
 const insert = 'INSERT INTO users(id, login, email, password, role) VALUES($1, $2, $3, $4, $5)'
 const salt = "secretkeynumber1";
 
-const get = 'select * from users where email = $1'
+const get = 'SELECT * FROM users WHERE email = $1'
 
 async function insertUserBuilder(values) {
     const array = [...values]

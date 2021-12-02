@@ -3,7 +3,7 @@ const client = require('../db')
 
 const insert = 'INSERT INTO videos(Id, Name, Link, Owner, Duration, Quality, Created) VALUES($1, $2, $3, $4, $5, $6, CURRENT_TIMESTAMP(0))'
 
-const get = 'select v.id, v.name, v.link, v.duration, v.quality, v.created, u.login as owner from videos v left join users u on v.owner=u.id'
+const get = 'SELECT v.id, v.name, v.link, v.duration, v.quality, v.created, u.login AS owner FROM videos v LEFT JOIN users u ON v.owner=u.id'
 
 async function insertVideoBuilder(values) {
     const array = [...values]

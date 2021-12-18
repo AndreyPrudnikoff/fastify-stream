@@ -6,7 +6,7 @@ describe('Array', function () {
             assert.equal([1, 2, 3].indexOf(4), -1);
         });
         it('should return index when the value is present', function () {
-            assert.equal([1, 2, 3].indexOf(3), 1);
+            assert.equal([1, 2, 3].indexOf(3), 4);
         });
     });
 });
